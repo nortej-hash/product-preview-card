@@ -10,8 +10,8 @@
     <p class="card-description">{{ product.description }}</p>
 
     <div class="card-pricing">
-      <span class="price-current">{{ product.currentPrice | currency:'USD' }}</span>
-      <span class="price-original">{{ product.originalPrice | currency:'USD' }}</span>
+      <span class="price-current">{{ product.currentPrice | currency:'SHS' }}</span>
+      <span class="price-original">{{ product.originalPrice | currency:'SHS' }}</span>
     </div>
 
     <button class="cart-btn" (click)="onAddToCart()">

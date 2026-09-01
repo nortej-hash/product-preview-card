@@ -13,8 +13,8 @@ export class AppComponent {
     category: 'Perfume',
     title: 'Gabrielle Essence Eau De Parfum',
     description: 'A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.',
-    currentPrice: 149.99,
-    originalPrice: 169.99,
+    currentPrice: 149,
+    originalPrice: 169,
     desktopImage: 'https://raw.githubusercontent.com/frontend-mentor-challenges/product-preview-card-component/main/images/image-product-desktop.jpg',
     mobileImage: 'https://raw.githubusercontent.com/frontend-mentor-challenges/product-preview-card-component/main/images/image-product-mobile.jpg'
   };
