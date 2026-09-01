@@ -1,0 +1,21 @@
+<article class="card">
+  <picture class="card-media">
+    <source media="(min-width: 600px)" [srcset]="product.desktopImage">
+    <img [src]="product.mobileImage" [alt]="product.title" class="card-img">
+  </picture>
+
+  <div class="card-body">
+    <span class="card-category">{{ product.category }}</span>
+    <h1 class="card-title">{{ product.title }}</h1>
+    <p class="card-description">{{ product.description }}</p>
+
+    <div class="card-pricing">
+      <span class="price-current">{{ product.currentPrice | currency:'USD' }}</span>
+      <span class="price-original">{{ product.originalPrice | currency:'USD' }}</span>
+    </div>
+
+    <button class="cart-btn" (click)="onAddToCart()">
+      Add to Cart
+    </button>
+  </div>
+</article>
