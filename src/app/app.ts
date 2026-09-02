@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ProductCardComponent, Product } from './product-card/product-card';
+import { ProductCardComponent } from './product-card/product-card';
+import { Product } from './product-card/product-card';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,10 @@ export class AppComponent {
     category: 'Perfume',
     title: 'Gabrielle Essence Eau De Parfum',
     description: 'A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.',
-    currentPrice: 149,
-    originalPrice: 169,
+    currentPrice: 14999,
+    originalPrice: 16999,
+    
+    // Direct production web URLs
     desktopImage: 'https://raw.githubusercontent.com/frontend-mentor-challenges/product-preview-card-component/main/images/image-product-desktop.jpg',
     mobileImage: 'https://raw.githubusercontent.com/frontend-mentor-challenges/product-preview-card-component/main/images/image-product-mobile.jpg'
   };
