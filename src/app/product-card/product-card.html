@@ -1,8 +1,18 @@
 <article class="card">
-  <picture class="card-media">
-    <source media="(min-width: 600px)" [srcset]="product.desktopImage">
-    <img [src]="product.mobileImage" [alt]="product.title" class="card-img">
-  </picture>
+  <div class="card-media">
+    <picture>
+      <!-- Loads desktop image when screen width is >= 600px -->
+      <source media="(min-width: 600px)" [srcset]="product.desktopImage">
+      
+      <!-- Fallback / Mobile image URL -->
+      <img 
+        class="card-img" 
+        [src]="product.mobileImage" 
+        [alt]="product.title"
+        loading="lazy"
+      >
+    </picture>
+  </div>
 
   <div class="card-body">
     <span class="card-category">{{ product.category }}</span>
@@ -10,11 +20,14 @@
     <p class="card-description">{{ product.description }}</p>
 
     <div class="card-pricing">
-      <span class="price-current">{{ product.currentPrice | currency:'SHS' }}</span>
-      <span class="price-original">{{ product.originalPrice | currency:'SHS' }}</span>
+      <span class="price-current">{{ product.currentPrice | currency:'KSh ':'symbol':'1.2-2' }}</span>
+      <span class="price-original">{{ product.originalPrice | currency:'KSh ':'symbol':'1.2-2' }}</span>
     </div>
 
     <button class="cart-btn" (click)="onAddToCart()">
+      <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px; vertical-align: middle;">
+        <path d="M14.383 10.388l1.613-7.17A.881.881 0 0015.133 2H3.774L3.148.17A.88.88 0 002.31 0H.88C.394 0 0 .394 0 .88s.394.88.88.88h.719l2.482 7.252a1.76 1.76 0 00-1.48 1.733v.038C2.601 11.758 3.42 12.5 4.417 12.5h8.905c.486 0 .88-.394.88-.88s-.394-.88-.88-.88H4.417a.23.23 0 01-.231-.223c0-.022.003-.044.008-.066l.205-.595h8.92a.88.88 0 00.864-.668zM4.417 14.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm7 0a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" fill="#FFF"/>
+      </svg>
       Add to Cart
     </button>
   </div>
